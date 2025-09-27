@@ -27,6 +27,12 @@ class Movie {
         void print();
 };
 
+void Movie::print() {
+    cout << "Movie: " << title << endl;
+    cout << "\tYear released: " << year << endl;
+
+}
+
 int main() {
     // create the vector to hold the movies
     vector<Movie> movies;
@@ -56,6 +62,6 @@ int main() {
         cout << "Input file not there" << endl;
     }
 
-    
+
 
 }
