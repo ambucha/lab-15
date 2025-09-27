@@ -27,9 +27,12 @@ class Movie {
         void print();
 };
 
+// print() function with no arguments and no returns
+// Goes through and prints each private member variable fo the movie class
 void Movie::print() {
     cout << "Movie: " << title << endl;
     cout << "\tYear released: " << year << endl;
+    cout << "\tScreenwriter: " << writer << endl << endl;
 
 }
 
@@ -62,6 +65,8 @@ int main() {
         cout << "Input file not there" << endl;
     }
 
-
-
+    // Create a for loop to go through each element in the vector
+    for (auto m : movies) {
+        m.print();
+    }
 }
