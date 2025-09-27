@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <fstream>
 using namespace std;
 
 // Create movie class with three private member variables: title, writer, year
@@ -26,5 +28,7 @@ class Movie {
 };
 
 int main() {
-    
+    // create the vector to hold the movies
+    vector<Movie> movies;
+    // create variables to temporarily hold the class com
 }
