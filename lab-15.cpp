@@ -16,12 +16,12 @@ class Movie {
         int year;
     public:
         // Getters and setters
-        string getTitle() {return title;}
-        void setTitle(string t) {t = title;}
-        string getWriter() {return writer;}
-        void setWriter(string w) {w = writer;} 
-        int getYear() {return year;}
-        void setYear(int y) {y = year;}
+        string getTitle() const {return title;}
+        void setTitle(string t) {title = t;}
+        string getWriter() const {return writer;}
+        void setWriter(string w) {writer = w;} 
+        int getYear() const {return year;}
+        void setYear(int y) {year = y;}
 
         // Print function
         void print();
@@ -49,7 +49,7 @@ int main() {
     ifstream fin ("data.txt");
     if(fin.good()) {
         // create a while loop that collects the data into temporary variables and then inputs it into the array at the end
-        while (fin >> t) {
+        while (getline(fin,t)) {
             fin >> y;
             fin.ignore();
             getline(fin, w);
